@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+      <h1>제목 : <%=board.title%> </h1>
+      <h3>작성자 : <%=board.author%> </h3>
+      <h3>내용 : <%=board.contents%> </h3>
+    <hr>
+    <% if (board.comments !== null) {
+        var comment = board.comments;
+          for(var i = 0; i < board.comments.length; i++) {%>
+    <h4>작성자 : <%=comment[i].author%></h4>
+    <h4>내용 : <%=comment[i].contents%></h4>
+    <hr>
+    <%}}%>
+    <form action="/comment/write" method="post">
+      <input type="text" name="id" value="<%=board._id%>" hidden>
+      댓글 : <textarea name="contents"></textarea><br>
+      글쓴이 : <input type="text" name="author"><br>
+      <input type="submit" value="확인">
+    </form>
+  </body>
+</html>

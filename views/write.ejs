@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/board/write" method="post">
+      제목 : <input type="text" name="title"><br>
+      내용 : <textarea name="contents"></textarea><br>
+      글쓴이 : <input type="text" name="author"><br>
+      <input type="submit" value="확인">
+    </form>
+  </body>
+</html>
