@@ -5,3 +5,4 @@ before install project
 1. install mongdb
 2. create 'mydb' database
 3. start mongod
+4. npm start
