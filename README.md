@@ -1,2 +1,7 @@
 # Nodejs-board-sample
-using nodejs, express, mongodb(mongoose), ejs
+nodejs, express, mongodb(mongoose), ejs
+
+before install project
+1. install mongdb
+2. create 'mydb' database
+3. start mongod
